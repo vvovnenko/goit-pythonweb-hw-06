@@ -21,7 +21,7 @@ class Group(Base):
 
     id: Mapped[int] = mapped_column(primary_key=True)
     name: Mapped[str] = mapped_column(String(100), nullable=False)
-    records: Mapped[list["Student"]] = relationship(back_populates="group")
+    students: Mapped[list["Student"]] = relationship(back_populates="group")
 
 
 class Teacher(Base):
